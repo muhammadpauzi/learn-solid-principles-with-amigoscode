@@ -4,7 +4,7 @@ require_once('./Circle.php');
 require_once('./Cube.php');
 require_once('./IAreaCalculator.php');
 
-class AreaCalculator implements IAreaCalculator
+class AreaCalculatorV2 implements IAreaCalculator
 {
     public function sum(array $shapes): int
     {
