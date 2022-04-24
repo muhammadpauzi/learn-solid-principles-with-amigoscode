@@ -16,4 +16,20 @@ class AreaCalculator
         }
         return $sum;
     }
+
+    // ini tidak termasuk ke SOLID PRINCIPLES (seharusnya ditulis di class lain)
+    // public function JSON(array $shapes): string
+    // {
+    //     $data = [
+    //         "sum" => $this->sum($shapes)
+    //     ];
+    //     return json_encode($data);
+    // }
+
+    // ini juga
+    // public function CSV(array $shapes): string
+    // {
+    //     $sum = $this->sum($shapes);
+    //     return "sum,$sum";
+    // }
 }
