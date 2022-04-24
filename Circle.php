@@ -1,5 +1,7 @@
 <?php
-class Circle
+require_once('./IShape.php');
+
+class Circle implements IShape
 {
     // private int $radius;
 
@@ -10,5 +12,11 @@ class Circle
     public function getRadius(): int
     {
         return $this->radius;
+    }
+
+    // Override
+    public function area(): float
+    {
+        return pi() * pow($this->getRadius(), 2);
     }
 }

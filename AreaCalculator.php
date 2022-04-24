@@ -1,6 +1,7 @@
 <?php
 require_once('./Square.php');
 require_once('./Circle.php');
+require_once('./Cube.php');
 
 class AreaCalculator
 {
@@ -8,11 +9,17 @@ class AreaCalculator
     {
         $sum = 0;
         foreach ($shapes as $shape) {
-            if ($shape instanceof Square)
-                $sum += pow($shape->getLength(), 2); // length^2
+            $sum += $shape->area();
 
-            if ($shape instanceof Circle)
-                $sum = pi() * pow($shape->getRadius(), 2); // radius^2
+            // if ($shape instanceof Square)
+            //     $sum += pow($shape->getLength(), 2); // length^2
+
+            // if ($shape instanceof Circle)
+            //     $sum = pi() * pow($shape->getRadius(), 2); // radius^2
+
+            // ini tidak termasuk O: Open Closed (karena mengubah kode dari sebuah class utama)
+            // if ($shape instanceof Cube) {
+            // }
         }
         return $sum;
     }

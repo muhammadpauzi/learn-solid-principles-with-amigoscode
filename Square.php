@@ -1,4 +1,6 @@
 <?php
+require_once('./IShape.php');
+
 class Square
 {
     // private int $length;
@@ -7,8 +9,14 @@ class Square
     {
     }
 
-    public function getLength(): int
+    public function getLength(): float
     {
         return $this->length;
+    }
+
+    // Override
+    public function area(): int
+    {
+        return pow($this->getLength(), 2);
     }
 }
